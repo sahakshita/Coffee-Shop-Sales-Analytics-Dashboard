@@ -8,12 +8,6 @@ An end-to-end sales analysis of a three-store coffee shop, using **MySQL** to cl
 
 This project was built following the Coffee Shop Sales project by Data Tutorials (YouTube).
 
-## 📊 Dashboard Preview
-
-![Coffee Shop Sales Dashboard](coffee_shop_dashboard.png)
-
-*Dashboard view with March 2023 selected. The interactive version, including the hover tooltips, is in the `.pbix` file.*
-
 ## 🛠️ Tools and Skills Used
 
 - 🐬 **MySQL:** data cleaning (`STR_TO_DATE`, `ALTER TABLE`, `UPDATE`), aggregation (`SUM`, `COUNT`, `AVG`, `ROUND`), date functions (`MONTH`, `DAY`, `DAYOFWEEK`, `HOUR`), `CASE` statements, subqueries, and window functions (`LAG() OVER`, `AVG() OVER`) for month-over-month growth
@@ -22,16 +16,22 @@ This project was built following the Coffee Shop Sales project by Data Tutorials
 
 ## 💡 Key Insights
 
-**📅 Overall (Jan-Jun 2023):** total sales of **$698.8K** from **149,116** transactions and **214,470** units sold. Monthly sales grew from $81,678 in January to $166,486 in June (+103.8%).
+### 📅 Overall (January to June 2023)
 
-**🚀 May 2023 (compared with April):**
-
-- Sales were **$156,728** (+31.77%), orders were **33,527** (+32.33%) and units sold were **48,233** (+32.26%).
+- Total sales were **$698.8K** from **149,116** transactions and **214,470** units sold.
+- Monthly sales grew from $81,678 in January to $166,486 in June (**+103.8%**). February was the only month that dropped (-6.8%).
 - The average sale stayed at about $4.69 every month, so growth came from more customers and items, not higher prices.
-- 🌅 Mornings drive sales: 8:00 to 10:59 am brings in **36.8%** of May sales, and 10 am is the busiest hour.
+- Coffee (38.6%) and Tea (28.1%) together make up **66.7%** of sales.
+- The three stores are almost equal: Hell's Kitchen 33.8%, Astoria 33.2% and Lower Manhattan 32.9%.
+- 🌅 Mornings drive sales: 8:00 to 10:59 am brings in **36.7%** of all sales.
+- Weekends sell as well as weekdays per day ($3,874 vs $3,828).
+
+### 🔍 May 2023 deep dive (the month used in the SQL queries)
+
+- Compared with April, sales were **$156,728** (+31.77%), orders were **33,527** (+32.33%) and units sold were **48,233** (+32.26%).
 - Weekdays made 74.4% of sales and weekends 25.6%, but May had 23 weekdays and 8 weekend days. Per day, sales were almost equal ($5,071 vs $5,012).
-- ☕ Coffee (38.5%) and Tea (28.4%) together make up **66.9%** of sales. The top 10 product types bring 79.2%.
-- 🏪 The three stores are almost equal: Hell's Kitchen 33.6%, Astoria 33.5% and Lower Manhattan 33.0%.
+- The top 10 product types brought 79.2% of May sales, led by Barista Espresso ($20.4K).
+- 10 am was the busiest hour ($19,639).
 
 The full write-up with recommendations is in `Coffee_Shop_Sales_Insights.pdf`.
 
@@ -41,7 +41,6 @@ The full write-up with recommendations is in `Coffee_Shop_Sales_Insights.pdf`.
 |------|-------------|
 | `coffee_shop_sales_dashboard.pbix` | Power BI report file (open with Power BI Desktop) |
 | `coffee_shop_sales_dashboard.pdf` | PDF export of the dashboard |
-| `coffee_shop_dashboard.png` | Dashboard image used in this README |
 | `MY_SQL_Queries.pdf` | All MySQL queries with their outputs |
 | `Coffee_Shop_Sales_Insights.pdf` | Insights report with findings and recommendations |
 | `Coffee_Shop_Sales.xlsx` | Raw transaction data |
