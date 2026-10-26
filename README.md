@@ -8,6 +8,32 @@ An end-to-end sales analysis of a three-store coffee shop, using **MySQL** to cl
 
 This project was built following the Coffee Shop Sales project by Data Tutorials (YouTube).
 
+## 🎯 Problem Statement
+
+The coffee shop wants a clear view of how its sales are performing so it can plan staffing, stock and promotions. This project answers that using SQL and a Power BI dashboard.
+
+**KPIs to track** (for the selected month, with month-over-month change and difference):
+
+- Total sales
+- Total orders
+- Total quantity sold
+
+**Business questions:**
+
+- Which days and hours bring the most sales (calendar heat map and day-by-hour heat map)?
+- Do weekdays and weekends perform differently?
+- How do the three store locations compare?
+- Which product categories and the top 10 products drive sales?
+- Which days are above or below the average daily sales?
+
+## 🧭 Approach
+
+1. Prepared the raw data file and imported it into a MySQL database
+2. Cleaned the data and fixed the data types (dates, times and the `transaction_id` column name)
+3. Wrote SQL queries for every KPI and business question (all in `MY_SQL_Queries.pdf`)
+4. Built the Power BI dashboard with month slicer, charts and hover tooltips
+5. Wrote up the findings and recommendations in `Coffee_Shop_Sales_Insights.pdf`
+
 ## 🛠️ Tools and Skills Used
 
 - 🐬 **MySQL:** data cleaning (`STR_TO_DATE`, `ALTER TABLE`, `UPDATE`), aggregation (`SUM`, `COUNT`, `AVG`, `ROUND`), date functions (`MONTH`, `DAY`, `DAYOFWEEK`, `HOUR`), `CASE` statements, subqueries, and window functions (`LAG() OVER`, `AVG() OVER`) for month-over-month growth
@@ -34,6 +60,13 @@ This project was built following the Coffee Shop Sales project by Data Tutorials
 - 10 am was the busiest hour ($19,639).
 
 The full write-up with recommendations is in `Coffee_Shop_Sales_Insights.pdf`.
+
+## ✅ Recommendations
+
+- Put the most staff on from 7 to 11 am, when almost half of the daily sales happen
+- Try a coffee-and-bakery combo or afternoon offer to lift the quieter hours
+- Keep weekend staffing close to weekday level, since sales per day are almost equal
+- Review the four lowest-selling categories (Branded, Loose Tea, Flavours, Packaged Chocolate)
 
 ## 📂 Repository Contents
 
